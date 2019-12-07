@@ -126,7 +126,7 @@ open(OUT, '>charset_lookup.gperf') or die;
 print OUT "
 struct charset_alias { short int alias_pos; short int canonic; };
 %{
-static const struct charset_alias *charset_lookup(register const char *str, register size_t len);
+static const struct charset_alias *charset_lookup(const char *str, size_t len);
 %}
 %%
 ";
